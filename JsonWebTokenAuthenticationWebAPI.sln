@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonWebTokenAuthentication.API", "JasonWebTokensWebAPI\JsonWebTokenAuthentication.API.csproj", "{F389BC61-781E-4A8C-8786-F9D39C4670EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonWebTokenAuthentication.API.Tests", "JasonWebTokensWebAPI.Tests\JsonWebTokenAuthentication.API.Tests.csproj", "{7CD38A33-8219-4397-AFF0-1B7DA7D55C52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonWebTokenAuthentication.Client", "JsonWebTokenAuthentication.Client\JsonWebTokenAuthentication.Client.csproj", "{80E38EAD-357A-426A-A2CE-7D9C5FA7C3CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonWebTokenAuthentication.Client.Tests", "JsonWebTokenAuthentication.Client.Tests\JsonWebTokenAuthentication.Client.Tests.csproj", "{026AB17A-28D2-4587-8858-70BB0B15D224}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F389BC61-781E-4A8C-8786-F9D39C4670EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F389BC61-781E-4A8C-8786-F9D39C4670EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F389BC61-781E-4A8C-8786-F9D39C4670EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F389BC61-781E-4A8C-8786-F9D39C4670EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD38A33-8219-4397-AFF0-1B7DA7D55C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD38A33-8219-4397-AFF0-1B7DA7D55C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD38A33-8219-4397-AFF0-1B7DA7D55C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD38A33-8219-4397-AFF0-1B7DA7D55C52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E38EAD-357A-426A-A2CE-7D9C5FA7C3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E38EAD-357A-426A-A2CE-7D9C5FA7C3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E38EAD-357A-426A-A2CE-7D9C5FA7C3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E38EAD-357A-426A-A2CE-7D9C5FA7C3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{026AB17A-28D2-4587-8858-70BB0B15D224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{026AB17A-28D2-4587-8858-70BB0B15D224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{026AB17A-28D2-4587-8858-70BB0B15D224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{026AB17A-28D2-4587-8858-70BB0B15D224}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

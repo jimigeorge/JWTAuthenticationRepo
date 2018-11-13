@@ -52,10 +52,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JasonWebTokensWebAPI\JasonWebTokensWebAPI.csproj">
+    <ProjectReference Include="..\JasonWebTokensWebAPI\JsonWebTokenAuthentication.API.csproj">
       <Project>{F389BC61-781E-4A8C-8786-F9D39C4670EA}</Project>
-      <Name>JasonWebTokensWebAPI</Name>
+      <Name>JsonWebTokenAuthentication.API</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

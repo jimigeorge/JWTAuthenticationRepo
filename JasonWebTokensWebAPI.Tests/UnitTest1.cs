@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace JasonWebTokensWebAPI.Tests
+namespace JsonWebTokenAuthentication.API.Tests
 {
     [TestClass]
     public class UnitTest1

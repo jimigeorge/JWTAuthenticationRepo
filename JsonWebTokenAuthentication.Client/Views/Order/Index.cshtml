@@ -1,0 +1,75 @@
+﻿@model IEnumerable<JsonWebTokenAuthentication.Client.Models.OrderViewModel>
+
+@{
+    ViewBag.Title = "Order List";
+    var message = ViewBag.Message;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Order List</h2>
+
+
+    @*<h2 class="alert-warning">@message Please @Html.ActionLink("Login", "Login", "Account") to view the order list.</h2>*@
+
+    <div class="alert-warning">
+        @Html.ValidationSummary(true)
+    </div>
+@if (Request.Cookies["jwttoken"]!= null)
+{
+    <div>
+        <div>
+            <h4>Orders</h4>
+            <hr />
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrderID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CustomerName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ShipperCity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IsShipped)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CustomerName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ShipperCity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsShipped)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.OrderID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.OrderID })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-6">
+                <input type="button" value="Add New" class="btn btn-default" onclick="location.href='@Url.Action("Create", "Order")'" />
+            </div>
+        </div>
+    </div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")*@
+</p>
+}
