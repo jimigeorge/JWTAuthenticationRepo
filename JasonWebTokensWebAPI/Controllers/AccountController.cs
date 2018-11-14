@@ -32,6 +32,7 @@ namespace JsonWebTokenAuthentication.API.Controllers
             IHttpActionResult errorResult = GetErrorResult(resullt);
             if(errorResult!=null)
             {
+               // return Request.CreateResponse(HttpStatusCode.BadRequest, resullt,new System.Net.Http.Headers.MediaTypeHeaderValue("application/json);
                 return errorResult;
             }
             return Ok();

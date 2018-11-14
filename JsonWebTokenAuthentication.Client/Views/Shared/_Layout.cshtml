@@ -22,12 +22,14 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-
+                    <li>@Html.ActionLink("Orders", "Index", "Order")</li>
                 </ul>
                 <ul class="nav navbar-nav pull-right">
                     @if (Request.Cookies["jwttoken"] != null)
-                    {
-                        <li class="pull-right">@Html.ActionLink("LogOut", "Logout", "Account")</li>
+                    {                   
+                            <li class="navbar-text text-center"> Logged In as: @Request.Cookies["UserName"].Value</li>
+                            <li class="pull-right">@Html.ActionLink("LogOut", "Logout", "Account")</li>
+                       
                     }
                     @if (Request.Cookies["jwttoken"] == null && ((RazorView)ViewContext.View).ViewPath != "~/Views/Account/Index.cshtml")
                     {

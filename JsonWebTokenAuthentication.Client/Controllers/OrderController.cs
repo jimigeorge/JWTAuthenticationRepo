@@ -159,6 +159,13 @@ namespace JsonWebTokenAuthentication.Client.Controllers
         [HttpPost]
         public ActionResult Create(OrderViewModel order)
         {
+            if (Request.Cookies["jwttoken"] == null)
+            {
+                ModelState.AddModelError(string.Empty, "You do not have access to this page. Please Login or Signup");
+                return RedirectToAction("Index","Account");
+            }
+            if (!ModelState.IsValid)
+                return View(order);
             using (var client = new HttpClient())
             {
                 var token = Request.Cookies["jwttoken"].Value.ToString();
